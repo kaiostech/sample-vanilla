@@ -1,0 +1,25 @@
+{
+  "name": "my-first-vanilla-app-for-kaios",
+  "version": "1.0.0",
+  "description": "A simple task application using only Vanilla",
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel index.html --out-dir build --open && cp ./manifest.webapp ./build/ && cp -r ./assets/ ./build/",
+    "build": "parcel build index.html --out-dir build && cp ./manifest.webapp ./build/ && cp -r ./assets/ ./build/",
+    "app:install": "kdeploy build install",
+    "app:uninstall": "kdeploy build uninstall",
+    "app:update": "kdeploy build update",
+    "app:start": "kdeploy build start",
+    "app:stop": "kdeploy build stop"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "7.2.0",
+    "parcel-bundler": "^1.6.1",
+    "kdeploy": "kaiostech/kdeploy"
+  },
+  "keywords": [
+    "vanilla",
+    "kaios"
+  ]
+}

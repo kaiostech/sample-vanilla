@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="theme-color" content="rgb(106, 0, 128)" />
+    <title>My first Vanilla App for KaiOS</title>
+    <link rel="stylesheet" type="text/css" href="/src/css/header.css" />
+    <link rel="stylesheet" type="text/css" href="/src/css/input.css" />
+    <link rel="stylesheet" type="text/css" href="/src/css/softkey.css" />
+    <link rel="stylesheet" type="text/css" href="/src/css/todos.css" />
+    <link rel="stylesheet" type="text/css" href="/src/css/root.css" />
+  </head>
+
+  <body>
+    <div id="root">
+      <header>
+        <span>ToDo List</span>
+      </header>
+
+      <div class="input">
+        <input type="text" nav-selectable="true" autofocus />
+        <label>New task</label>
+      </div>
+
+      <div id="toDos" class="todos"></div>
+
+      <div id="softkey">
+        <label id="left"></label>
+        <label id="center">Insert</label>
+        <label id="right"></label>
+      </div>
+    </div>
+    <script src="/src/index.js"></script>
+  </body>
+</html>
