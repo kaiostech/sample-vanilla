@@ -10,7 +10,7 @@
   font-family: inherit;
   width: 100%;
   border: 0;
-  border-bottom: 1px solid #d2d2d2;
+  border-bottom: 1px solid var(--input-border-color, #d2d2d2);
   outline: 0;
   font-size: 16px;
   color: transparent;
@@ -22,7 +22,7 @@
 .input label {
   position: absolute;
   bottom: 0;
-  color: #9b9b9b;
+  color: var(--input-label-color, #9b9b9b);
 }
 
 .input input::placeholder {
@@ -41,15 +41,13 @@
   display: block;
   transition: 0.2s;
   font-size: 12px;
-  color: #9b9b9b;
-}
-
-.input input[nav-selected="true"] ~ label {
-  color: #9b27af;
+  color: var(--input-selected-text-color, #9b27af);
+  font-weight: bold;
 }
 
 .input input[nav-selected="true"] {
   padding-bottom: 6px;
-  border-bottom: 2px solid #9b27af;
+  border-bottom: 2px solid var(--input-selected-border-color, #9b27af);
   text-shadow: 0 0 0 rgba(0, 0, 0, 1);
+  color: var(--input-text-color, transparent);
 }

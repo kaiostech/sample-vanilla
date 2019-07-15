@@ -10,5 +10,5 @@ body,
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  background-color: #E1E2E1 !important;
+  background-color: var(--app-background, #E1E2E1);
 }

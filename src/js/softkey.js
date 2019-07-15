@@ -1,4 +1,5 @@
 import Navigation from "./navigation";
+import Theme from './theme';
 
 const getCurrentElement = () => document.querySelector("[nav-selected=true]");
 
@@ -22,10 +23,30 @@ const SoftRight = event => {
   currentElement.remove();
 };
 
-const setLabels = ({ left, center, right }) => {
-  document.getElementById("left").innerText = left ? left : "";
-  document.getElementById("center").innerText = center ? center : "";
-  document.getElementById("right").innerText = right ? right : "";
+const SoftLeft = event => {
+  const whenApplyingTheme = () => {
+    const currentLabels = getLabels();
+    setLabels({
+      ...currentLabels,
+      left: currentLabels.left === "Dark" ? "Light" : "Dark"
+    })
+  }
+
+  Theme.toggle(whenApplyingTheme);
+};
+
+const getLabels = () => ({
+  left: document.getElementById("left").textContent,
+  center: document.getElementById("center").textContent,
+  right: document.getElementById("right").textContent
+});
+
+const setLabels = newLabels => {
+  const currentLabels = getLabels();
+  const applyLabels = { ...currentLabels, ...newLabels };
+  document.getElementById("left").innerText = applyLabels.left;
+  document.getElementById("center").innerText = applyLabels.center;
+  document.getElementById("right").innerText = applyLabels.right;
 };
 
 const addToDo = currentElement => {
@@ -42,4 +63,4 @@ const addToDo = currentElement => {
 const toggleToDo = currentElement =>
   currentElement.classList.toggle("completed");
 
-export default { Enter, SoftRight, setLabels };
+export default { Enter, SoftRight, SoftLeft, getLabels, setLabels };

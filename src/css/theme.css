@@ -1,0 +1,47 @@
+:root[theme="light"] {
+  --statusbar-color: rgb(106, 0, 128);
+  --header-background-color: #9b27af;
+  --header-text-color: #ffffff;
+
+  --app-background: #E1E2E1;
+
+  --softkey-background-color: #ffffff;
+  --softkey-border-color: #cbcbcb;
+  --softkey-text-color: #242424;
+
+  --input-label-color: #9b9b9b;
+  --input-border-color: #d2d2d2;
+  --input-text-color: transparent;
+  --input-selected-text-color: #9b27af;
+  --input-selected-border-color: #9b27af;
+
+  --todo-background-color: #F5F5F6;
+  --todo-text-color: #242424;
+  --todo-selected: linear-gradient(255deg, #9B27AF, #9B27AF);
+  --todo-selected-text-color: #ffffff;
+  --todo-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .2);
+}
+
+:root[theme="dark"] {
+  --statusbar-color: rgb(0, 0, 0);
+  --header-background-color: #1F1F1F;
+  --header-text-color: #CECECE;
+
+  --app-background: #121212;
+
+  --softkey-background-color: #000000;
+  --softkey-border-color: #646464;
+  --softkey-text-color: #f0f0f0;
+
+  --input-label-color: #CECECE;
+  --input-border-color: #CECECE;
+  --input-text-color: #CECECE;
+  --input-selected-text-color: #9b9b9b;
+  --input-selected-border-color: #9b9b9b;
+
+  --todo-background-color: #242424;
+  --todo-text-color: #CECECE;
+  --todo-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 1);
+  --todo-selected: linear-gradient(255deg, #CECECE, #CECECE);
+  --todo-selected-text-color: #000000;
+}
